@@ -1,0 +1,29 @@
+.btn{
+    text-align: center;
+    cursor: pointer;
+}
+//btn寬度滿版
+.btn-media-full{
+    @include mobile{
+        width: 100%;
+    }
+}
+//主要報名按鈕
+.btn-main{
+    background: $yellow-1;
+    color: $neutral-6;
+    font-size: $font-2;
+    font-weight: 700;
+    border-radius: 50rem;
+    padding: 20px 72px;
+    &:hover{
+        background: $yellow-2;
+        box-shadow: 0 0 10px rgba($yellow-2, 0.6);
+        border: 1px solid $yellow-2;
+    }
+    @include mobile{
+        font-size: $font-1;
+        line-height: 36px;
+        padding: 8px 39px;
+    }
+}

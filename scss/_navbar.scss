@@ -1,0 +1,113 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    @include mobile{
+        padding: 21px 16px;
+    }
+}
+header{
+    @include mobile{
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: $neutral-5;
+    }
+}
+.logo-group{
+    display: flex;
+    align-items: center;
+}
+.ham-icon{
+	display: none;
+    @include mobile{
+		display: block;
+		color: $neutral-1;
+		font-size: 30px;
+        margin-right: 20px;
+    }
+}
+.navbar-logo{
+    height: 22px;
+    @include mobile{
+        height: 13px;
+    }
+}
+.dropdown{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    &.active{
+        max-height: 300px; //打開dropdown
+    }
+    @include mobile{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 72px;
+        width: 100%;
+        transition: all 0.8s;
+        max-height: 0px; //平時縮起來，active在打開max-height
+		overflow: hidden;
+		z-index: 100;
+		flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+.navbar-item{
+    line-height: 1.25rem;
+    position: relative;
+    padding: 0 1rem;
+    @include mobile{
+        padding: 0;
+    }
+    a{
+        color: $neutral-2;
+        text-decoration: none;
+        @include mobile{
+            display: block;
+            background: $neutral-5;
+            padding: 1rem;
+        }
+    }
+}
+.navbar-item a:hover,
+.navbar-item a.active{
+    color: $neutral-1;
+    text-shadow: 0 0 10px rgba($neutral-1, 0.6);
+}
+
+//green底線
+.navbar-item-liner:hover::before,
+.navbar-item-liner-show::before{
+    height: 4px;
+    width: 12px;
+    background-color: $secondary-1;
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 6px);
+}
+
+//nav btn
+.btn-navbar-item{
+    margin-left: 32px;
+    border: 1px solid $neutral-1;
+    border-radius: 50rem;
+    color: $neutral-1;
+    background-color: transparent;
+    padding: 10px 24px 12px;
+    &:hover{
+        color: $secondary-1;
+        background-color: rgba($secondary-1, 0.2);
+        border: 1px solid $secondary-1;
+        box-shadow: 0 0 10px rgba($secondary-1, 0.6);
+    }
+    @include mobile{
+        margin-left: 0;
+    }
+}

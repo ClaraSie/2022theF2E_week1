@@ -1,0 +1,312 @@
+// 關卡資訊
+.section1{
+    padding: 160px 230px 100px 230px;
+    flex-direction: column;
+    align-items: center;
+    @include mobile{
+        padding: 76.2px 0px 22.5px 0px;
+    }
+    &-title{
+        margin-bottom: 80px;
+        @include mobile{
+            margin-bottom: 40px;
+            padding: 0px 44.5px;
+        }
+        p{
+            margin: 0;
+            border: 4px solid $secondary-1;
+            border-radius: 100px;
+            padding: 16px 36px 20px 36px;
+            font-weight: 700;
+            font-size: $font-4;
+            line-height: 72px;
+            color: $secondary-1;
+            text-shadow: 0px 0px 10px rgba($secondary-1, 0.6);
+            text-align: center;
+            @include mobile{
+                font-size: $font-3;
+                line-height: 48px;
+                padding: 20px 40px 24px 40px;
+            }
+        }
+        .icon-sparkle{
+            top: -79px;
+            right: -73.3px;
+            width: 68.43px;
+            @include mobile{
+                top: -52px;
+                right: 24.5px;
+                width: 46px;
+            }
+        }
+    }
+    &-subtitle{
+        color: $neutral-1;
+        font-size: $font-2;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 60px;
+        @include mobile{
+            white-space: pre-wrap;
+            font-size: $font-1;
+            line-height: 28px;
+        }
+    }
+    .icon-lock{
+        width: 188px;
+        height: 196px;
+    }
+}
+
+// 活動說明
+.section2{
+    background: $neutral-4;
+    padding: 80px 128px;
+    @include mobile{
+        padding: 76px 0;
+    }
+    &-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        @include mobile{
+            margin-bottom: 36px;
+        }
+        h3{
+            font-size: $font-4;
+            line-height: 72px;
+            font-weight: 700;
+            color: $neutral-1;
+            text-shadow: 0 0 10px rgba($neutral-1, 0.6);
+            text-align: center;
+            margin: 0px 36px;
+            @include mobile{
+                font-size: $font-3;
+                line-height: 48px;
+                margin: 0px 16px;
+            }
+        }
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.card-list{
+            margin-bottom: 144px;
+            @include mobile{
+                margin-bottom: 68px;
+            }
+        }
+        &.flex-rowreverse{
+            margin-bottom: 0;
+        }
+    }
+    .flex-rowreverse{
+        flex-direction: row-reverse;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+    // 箭頭圖示
+    .vector{
+        width: 40px;
+        height: 20px;
+        margin: 26px 62px;
+        .right{
+            transform: rotate(-90deg);
+            @include mobile{
+                transform: rotate(0deg);
+            }
+        }
+        .left{
+            transform: rotate(90deg);
+            @include mobile{
+                transform: rotate(0deg);
+            }
+        }
+        &.bottom{
+            position: absolute;
+            bottom: -98px;
+            left: calc(50% - 82px);
+            @include mobile{
+                bottom: -72px;
+            }
+        }
+    }
+}
+
+// 獎項設計
+.section3{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile{
+        padding: 80px 0;
+    }
+    &-title{
+        display: flex;
+        margin-bottom: 60px;
+        @include mobile{
+            flex-direction: column;
+            margin-bottom: 32px;
+        }
+    }
+    h4{
+        color: $neutral-1;
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 700;
+        text-shadow: 0 0 10px rgba($neutral-1, 0.6);
+        text-align: center;
+        margin: 0;
+        @include mobile{
+            font-size: $font-2;
+            line-height: 36px;
+        }
+    }
+}
+// 車跑到終點
+.carRunning{
+    width: 856px;
+    border-bottom: 3px solid $neutral-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+    @include mobile{
+        width: 340px;
+    }
+    .icon-finishFlag{
+        width: 55.2px;
+        @include mobile{
+            width: 40px;
+        }
+    }
+    .icon-car{
+        width: 84px;
+        @include mobile{
+            width: 61px;
+        }
+    }
+}
+
+// Q&A
+.QnA{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    @include mobile{
+        padding: 62.5px 0;
+    }
+    .tabs{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+    &-title{
+        font-family: MonumentExtended;
+        color: $neutral-1;
+        text-shadow: 0px 0px 10px rgba($neutral-1, 0.6);
+        font-size: $font-4;
+        line-height: 72px;
+        letter-spacing: 0.1em;
+        margin: 0 0 60px 0;
+        @include mobile{
+            font-size: $font-3;
+            line-height: 48px;
+            margin-bottom: 32px;
+        }
+    }
+    &-content{
+        margin: 44px 0 60px 0;
+        width: 881px;
+        @include mobile{
+            margin: 36px 16px 32px 16px;
+            width: auto;
+        }
+    }
+}
+
+// SponSORS
+.sponsors{
+    padding: 80px 0 100px 0;
+    background: $neutral-3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile{
+        padding: 60px 0;
+    }
+    &-title{
+        position: relative;
+        font-family: MonumentExtended;
+        color: $neutral-1;
+        font-size: $font-3;
+        line-height: 48px;
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+        @include mobile{
+            margin-bottom: 0;
+        }
+        h3{
+            margin: 0;
+        }    
+        & > img:first-of-type{ //前面大星星
+            position: absolute;
+            left: -41px;
+            bottom: -29px;
+            width: 50px;
+        }
+        & > img:last-of-type{ //後面大星星
+            position: absolute;
+            right: -29px;
+            top: -19px;
+            width: 38px;
+        }
+    }
+    &-subtitle{
+        color: $neutral-1;
+        font-size: $font-3;
+        line-height: 48px;
+        font-weight: 700;
+        margin: 0 0 60px 0;
+        @include mobile{
+            font-size: $font-2;
+            line-height: 36px;
+            margin: 0 0 40px 0;
+        }
+    }
+    &-list{
+        li{
+            cursor: pointer;
+            display: block;
+            width: 140px;
+            height: 140px;
+            border: 10px solid $neutral-1;
+            background: $neutral-1;
+            margin: 0 30px;
+            &:hover{
+                border: 10px solid $gradient-2; //todo
+            }
+            @include mobile{
+                width: 170px;
+                height: 170px;
+                margin: 0 0 24px 0;
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+        img{
+            display: block;
+            @include mobile{
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}

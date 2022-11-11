@@ -1,0 +1,32 @@
+/*----- 跑馬燈 -----*/
+.runline{
+    overflow: hidden;
+    max-width: 100%;
+    .loop{
+        display: inline-flex;
+    }
+    img{
+        width: auto;
+        max-width: none;
+    }
+    .joinus{
+        height: 58px;
+        @include mobile{
+            height: 34px;
+        }
+    }
+}
+.marqee,.marqee-reverse{
+    max-width: 100%;
+    &-content{
+        height: 90px;
+        @include mobile{
+            height: 40px;
+        }
+    }
+    img{
+        max-width: none;
+        width: auto;
+        display: block;
+    }
+}

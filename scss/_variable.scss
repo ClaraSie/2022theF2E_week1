@@ -1,0 +1,32 @@
+//neutral colors中性色
+$neutral-1: #FFFFFF;
+$neutral-2: #858993;
+$neutral-3: #151F3F;
+$neutral-4: #0E1835;
+$neutral-5: #06102B;
+$neutral-6: #000000;
+
+//primary colors主色
+$primary-1: #9DA4FF;
+$primary-2: #DCDEFF;
+$primary-3: #6E77E9;
+
+//secondary colors輔色
+$secondary-1: #55FFAD;
+
+//yellow colors
+$yellow-1: #FFE34E;
+$yellow-2: #FFF385;
+
+//Gradient Colors 漸層色
+$gradient-1: linear-gradient(180deg, $primary-1, $primary-3);
+$gradient-2: linear-gradient(90deg, $primary-1, $secondary-1);
+$gradient-3: linear-gradient(100.38deg, #313A65 ,  $primary-3);
+
+
+//font
+$font-base: 16px;
+$font-1: $font-base * 1.25; //20px
+$font-2: $font-base *1.5; //24px
+$font-3: $font-base * 2; //32px
+$font-4: $font-base * 3; //48px

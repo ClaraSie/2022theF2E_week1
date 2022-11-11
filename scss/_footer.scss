@@ -1,0 +1,15 @@
+footer{
+    padding: 32px 0;
+    @include mobile{
+        padding: 24px 0;
+    }
+    p{
+        color: $neutral-1;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        font-family: 'Montserrat';
+        text-align: center;
+        text-transform: capitalize;
+    }
+}

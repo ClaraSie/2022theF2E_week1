@@ -1,0 +1,17 @@
+@import "normalize";
+// @import "reset";
+@import "variable";
+@import "mixin";
+@import "font-family";
+
+//區塊式內容
+@import "layout";
+@import "navbar";
+@import "banner";
+@import "sections";
+@import "footer";
+
+//元件
+@import "button";
+@import "runline"; //跑馬燈
+@import "card" //卡片

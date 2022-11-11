@@ -1,0 +1,294 @@
+.banner{
+    padding: 82px 0 208px 0;
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    color: $neutral-1;
+    letter-spacing: 0.2em;
+    text-shadow: -3.9px -2.7px 0 $secondary-1, 6.5px 4px 0px rgba($primary-1, 0.6);
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+}
+.title-group{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    @include mobile{
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+}
+.h1-title{
+    font-family: MonumentExtended;
+    font-size: 79px;
+    padding-top: 36px;
+    @include mobile{
+        font-size: 41px;
+        padding-top: 4px;
+    }
+}
+.h1-sup{
+    font-family: PilotCommand; //斜體字
+    font-size: 52.5px;
+    @include mobile{
+        font-size: 27.3px;
+    }
+}
+h2{
+    text-align: center;
+    color: $neutral-1;
+    font-size: 28px;
+    line-height: 41px;
+    letter-spacing: 0.8em;
+    margin-top: 0;
+    margin-bottom: 100px;   //之後考慮改掉，用flex處理
+    @include mobile{
+        font-size: $font-1;
+        line-height: $font-1;
+        margin-bottom: 45px;
+    }
+}
+
+/* 以title h1為基準 */
+.banner-bg{
+    position: relative;
+    //連動THE F2E
+    .icon-code{
+        position: absolute;
+        top: 0;
+        left: -288px; //負數 = 間距 + icon大小
+        @include mobile{
+            top: -92px;
+            left: -17px;
+            max-width: 70px;
+        }
+    }
+    .icon-line02{
+        position: absolute;
+        top: 160px;
+        left: -83px;
+        @include mobile{
+            display: none;
+        }
+    }
+    //連動4TH
+    .icon-line01{
+        position: absolute;
+        top: 25px;
+        left: 209.6px;
+        @include mobile{
+            display: none;
+        }
+    }
+    .icon-lock{
+        position: absolute;
+        top: 148px;
+        max-width: 250px;
+        @include mobile{
+            max-width: 105px;
+            top: 236px;
+            right: -26px;
+        }
+    }
+}
+
+// 引導問題
+.trouble{
+    padding: 120px 0;
+    @include mobile{
+        padding: 60px 0;
+    }
+}
+.trouble-animation-item{
+    position: relative;
+    padding: 0 264px;
+    @include mobile{
+        padding: 0 10px;
+    }
+    //part1
+    .icon-rectangle1{
+        margin-left: 80px;
+        @include mobile{
+            width: 105px;
+            margin-left: 60px;
+        }
+    }
+    .icon-star-white{
+        margin-left: 48.89px;
+        padding-bottom: 50px;
+        @include mobile{
+            width: 23.7px;
+            margin-left: 26px;
+            padding-bottom: 10px;
+        }
+    }
+    .icon-trouble1{
+        margin-left: 22px;
+        @include mobile{
+            width: 268px;
+            margin-left: 13px;
+        }
+    }
+    .icon-question{
+        top: -17.4px;
+        right: 108px;
+        @include mobile{
+            width: 65.5px;
+            top: -50px;
+            right: 37px;
+        }
+    }
+    //part2
+    .icon-exclamation{
+        @include mobile{
+            width: 96px;
+            margin-left: 3.1px;
+            padding-top: 59.5px;
+        }
+    }
+    .icon-union{
+        margin-left: 32.53px;
+        margin-bottom: 114px;
+        @include mobile{
+            margin: 0;
+            width: 13px;
+            position: absolute;
+            top: 21.95px;
+            left: 81px;
+        }
+    }
+    .icon-trouble2{
+        top: -120px;
+        right: 0;
+        @include mobile{
+            width: 225.8px;
+            top: -29.7px;
+        }
+    }
+    //part3
+    .icon-trouble3{
+        margin-left: 94.6px;
+        @include mobile{
+            width: 265px;
+            margin-left: 3px;
+        }
+    }
+    .icon-rectangle2{
+        top: -120px;
+        left: 330px;
+        width: 349.7px;
+        @include mobile{
+            width: 131.5px;
+            top: -49.3px;
+            left: 98.6px;
+        }        
+    }
+    .icon-polygon{
+        top: -120px;
+        right: 47px;
+        width: 151px;
+        @include mobile{
+            width: 57px;
+            top: -60px;
+            right: 38.6px;
+        }
+    }
+    .icon-mouseaa{
+        top: -5px;
+        right: 0;
+        width: 193.85px;
+        @include mobile{
+            width: 72.9px;
+            top: 82.8px;
+            right: 23px;
+        }
+    }
+}
+
+// 破題banner - 互動式網頁設計
+.banner-wrapper{
+    background-color: $neutral-1;
+    &-bg{
+        background-image: url(../image/banner.png);
+        padding: 93.8px 0 73px 0;
+        // height: 562px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include mobile{
+            padding: 38px 0 84px 0;
+        }
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile{
+            flex-direction: column;
+
+        }
+    }
+    .hands{
+        width: 200px;
+        height: 200px;
+        @include mobile{
+            width: 120px;
+            height: 120px;
+            &-up{
+                transform: rotate(45deg);
+            }
+            &-down{
+                transform: rotate(135deg);
+            }          
+        }
+    }
+    .title{
+        width: 530px;
+        height: 335px;
+        @include mobile{
+            width: 326px;
+            height: 206px;
+        }
+    }
+    .subtitle{
+        margin-top: 24px;
+        font-size: $font-2;
+        line-height: 36px;
+        font-weight: 700;
+        text-align: center;
+        color: $neutral-6;
+        .xmark{
+            font-size: 22px;
+            padding: 0 48px;
+        }
+    }
+    .head-img{
+        width: 109px;
+        height: 109px;
+        top: 23.5px;
+        left: calc(50% + 190px);
+        @include mobile{
+            width: 91px;
+            height: 91px;
+            top: 79.28px;
+            left: calc(50% + 40px);
+        }
+    }
+    .bottom-img{
+        width: 205.4px;
+        height: 205.4px;
+        left: calc(50% - 474px);
+        bottom: -68px;
+        @include mobile{
+            width: 145px;
+            height: 145px;
+            left: 0;
+            bottom: -40px;
+        }
+    }
+}

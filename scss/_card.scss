@@ -1,0 +1,312 @@
+.card-list{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include mobile{
+        flex-direction: column;
+    }
+}
+.card{
+    border-radius: 32px;
+    list-style-type: none;
+}
+
+// 翻牌卡 - 設定
+// <li class="card-flip">
+//     <div class="front"></div>
+//     <div class="back"></div>
+// </li>
+.card-flip{
+    position: relative;
+    width: 300px;
+    height: 360px;
+    margin-right: 40px;
+    margin-left: 40px;
+    transform-style:preserve-3d;
+    cursor: pointer;
+
+    @include mobile{
+        margin: 0px 0px 40px 0px;
+    }
+    & > *{ // card-flip下的第一個階層
+        position: absolute;
+        padding: 16px 24px;
+        width: 100%;
+        height: 100%;
+    }
+    & > *:first-child{
+        backface-visibility:hidden; /*hide backface*/
+    }
+    & > *:first-child + *{
+        transform:rotateY(180deg);
+        backface-visibility:hidden; /*hide backface*/
+    }
+}
+
+//藍色漸層卡片
+.card-bk{
+    background: $gradient-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+    span{
+        font-family: MonumentExtended;
+        font-size: $font-3;
+        line-height: 48px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $neutral-1;
+        margin-bottom: 16px;
+    }
+}
+
+//白色卡片
+.card-N1{
+    background: $neutral-1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:  $primary-3;
+    .hashtag{
+        background-color: $secondary-1;
+        color: $neutral-5;
+        font-size: $font-base;
+        line-height: 20px;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+    &-title{
+        font-size: $font-2;
+        line-height: 36px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    &-subtitle{
+        font-size: $font-1;
+        line-height: 28px;
+        margin: 0;
+    }
+    //查看關卡細節
+    &-details{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: $primary-3;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 700;
+        &:hover{
+            text-shadow: 0 0 1px $primary-3;
+            span:first-child{
+                border-bottom: 1px solid $primary-3;
+            }
+        }
+    }
+    .mark{
+        font-family: MonumentExtended;
+        letter-spacing: 0.1em;
+        font-size: 14px;
+        line-height: 18px;
+        color: $primary-2;
+    }
+    img{
+        width: 165px;
+        height: 165px;
+        margin-bottom: 16px;
+    }
+}
+
+// 白框卡片
+// 活動card
+.card-frame-N1{
+    width: 520px;
+    height: 300px;
+    border: 3px solid $neutral-1;
+    padding: 40px;
+    color: $neutral-1;
+    font-size: $font-1;
+    line-height: 28px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile{
+        width: 343px;
+        height: auto;
+        padding: 29px;
+        flex-direction: column;
+    }
+    &:hover{
+        border: 3px solid $primary-1;
+        background: rgba($primary-3, 0.1);
+        box-shadow: 0px 0px 10px rgba($primary-1, 0.6);
+        .card-frame-N1-title{
+            color: $primary-1;
+            text-shadow: 0px 0px 10px rgba($primary-1, 0.6);
+        }
+    }
+    p{
+        margin: 0; //處理p原本會有上下margin的問題
+    }
+    &-inner{
+        width: 260px;
+        @include mobile{
+            width: 100%;
+        }
+        img{
+            height: 100px;
+            @include mobile{
+                height: 89px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+    &-title{
+        font-size: $font-3;
+        line-height: 48px;
+        font-weight: 700;
+        margin-bottom: 16px !important;
+        @include mobile{
+            font-size: $font-2;
+            line-height: 36px;
+        }
+    }
+    .vertical-line{
+        text-align: center;
+        margin: 8px 0;
+        font-size: 12px;
+    }
+}
+
+// 綠字
+.markers{
+    color: $secondary-1;
+}
+
+// 深藍卡 - 獎項設計
+.card-blue{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $neutral-3;
+    border: 2px solid $gradient-3;
+    width: 485px;
+    padding: 40px;
+    margin: 0 30px;
+    @include mobile{
+        width: 343px;
+        padding: 24px;
+        margin: 0 0 24px 0;
+        &:last-child{
+            margin: 0;
+        }
+    }
+    img{
+        width: 80px;
+        height: 80px;
+    }
+    &-title{
+        color: $primary-1;
+        text-shadow: 0px 0px 10px rgba($primary-1, 0.6);
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 0 56px 0;
+        @include mobile{
+            font-size: $font-3;
+            line-height: 48px;
+            margin-bottom: 40px;
+        }
+    }
+    &-subtitle{
+        font-size: $font-2;
+        line-height: 36px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        @include mobile{
+            font-size: $font-2;
+            line-height: 36px;
+        }
+    }
+    &-textGroup{
+        margin-bottom: 8px;
+        display: flex;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+    &-details{
+        color: $neutral-2;
+        font-size: $font-1;
+        line-height: 20px;
+        margin-bottom: 24px;
+        @include mobile{
+            font-size: $font-base;
+            line-height: 20px;
+        }
+    }
+    &-content{
+        color: $neutral-1;
+        font-size: $font-1;
+        line-height: 28px;
+        width: 100%;
+    }
+    .fw700{
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+}
+
+//QAd card
+.card-N1-big{
+    background: $neutral-1;
+    color: $neutral-5;
+    list-style-type: none;
+    margin: 0;
+    padding: 80px;
+    text-align: left;
+    @include mobile{
+        padding: 32px 24px;
+    }
+    li{
+        display: flex;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+    &-question{
+        font-family: MonumentExtended;
+        font-size: $font-3;
+        line-height: 48px;
+        letter-spacing: 0.1em;
+        color: $primary-3;
+        margin: 0 24px 0 0;
+        @include mobile{
+            font-size: $font-2;
+            line-height: 36px;
+            margin: 0;
+        }
+    }
+    &-title{
+        font-size: $font-2;
+        line-height: 36px;
+        font-weight: 700;
+        margin: 0 0 16px 0;
+    }
+    &-details{
+        font-size: $font-1;
+        line-height: 28px;
+        margin: 0 0 80px 0;
+        @include mobile{
+            margin-bottom: 56px;
+        }
+    }
+}
