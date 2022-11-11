@@ -309,4 +309,33 @@
             margin-bottom: 56px;
         }
     }
+    &-tagsGroup{
+        display: none;
+        @include mobile{
+            display: flex;
+            max-width: 100%;
+            justify-content: space-between;
+            &.right{
+                flex-direction: row-reverse;   
+            }
+        }  
+        .tags{
+            color: $primary-3;
+            font-size: $font-1;
+            line-height: 28px;
+            font-weight: 700;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: 10px;
+            margin-left: 15.25px;
+            &.vectorleft{
+                transform: rotate(180deg);
+                margin-left: 0;
+                margin-right: 15.25px;
+            }
+        }
+    }
 }
